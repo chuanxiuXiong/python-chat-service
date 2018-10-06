@@ -1,0 +1,17 @@
+server started on 127.0.0.1 at port 7584...
+client connection from host 127.0.0.1 port 50670
+client connection from host 127.0.0.1 port 50711
+client connection from host 127.0.0.1 port 50738
+client connection from host 127.0.0.1 port 50773
+received register John from host 127.0.0.1 port 50773
+client connection from host 127.0.0.1 port 50866
+received register Mary from host 127.0.0.1 port 50866
+sendto Mary from John  Hello How are you
+recvfrom John to Mary  Hello How are you
+sendto John from Mary Im good
+recvfrom Mary to John Im good
+sendto Alice from Mary hey there
+Alice not registered with server, spawning Alice
+client connection from host 127.0.0.1 port 51553
+recvfrom Mary hey there
+received register Alice from host 127.0.0.1 port 51553

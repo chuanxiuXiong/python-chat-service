@@ -1,0 +1,7 @@
+connecting to the server 127.0.0.1 at port 7584
+sending register message Mary
+received welcome
+recvfrom John  Hello How are you
+sendto John Im good
+sendto Alice hey there
+terminating client...
