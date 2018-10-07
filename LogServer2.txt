@@ -1,0 +1,7 @@
+server started on 192.168.0.6 at port 9000...
+server overlay started at port 2501
+client connection from host 192.168.0.6 port 55135
+received register Alice from host 192.168.0.6 port 55135
+sendto Alice from John alice
+recvfrom John to Alice alice
+terminating server...

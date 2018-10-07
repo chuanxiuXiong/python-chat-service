@@ -1,0 +1,6 @@
+received client register John from server 192.168.0.6 port 55108
+received client register Mary from server 192.168.0.6 port 55108
+received client register Alice from server 192.168.0.6 port 55115
+sending spwan Bob to server 192.168.0.6 port 55108
+received client register Bob from server 192.168.0.6 port 55108
+terminating registrar..,

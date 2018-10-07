@@ -1,0 +1,20 @@
+server started on 192.168.0.6 at port 7584...
+server overlay started at port 2500
+server joined overlay from host 192.168.0.6 port 55116
+client connection from host 192.168.0.6 port 55123
+received register John from host 192.168.0.6 port 55123
+client connection from host 192.168.0.6 port 55128
+received register Mary from host 192.168.0.6 port 55128
+sendto Mary from John mary
+recvfrom John to Mary mary
+sendto Alice from John alice
+Alice not registered with server
+sending message to server overlay alice
+sendto Bob from John bob
+Bob not registered with server
+sending message to server overlay bob
+received spwan client from registrar
+client connection from host 192.168.0.6 port 55172
+received register Bob from host 192.168.0.6 port 55172
+recvfrom John to Bob bob
+terminating server...

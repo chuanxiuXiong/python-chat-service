@@ -1,5 +1,6 @@
-connecting to the server 127.0.0.1 at port 7584
+connecting to the server 192.168.0.6 at port 7584
 sending register message John
 received welcome
-sendto Mary  Hello How are you
-recvfrom Mary Im good
+sendto Mary mary
+sendto Alice alice
+sendto Bob bob
