@@ -1,5 +1,0 @@
-connecting to the server 192.168.0.6 at port 9000
-sending register message Alice
-received welcome
-recvfrom John alice
-terminating client...

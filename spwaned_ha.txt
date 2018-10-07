@@ -1,4 +1,0 @@
-connecting to the server 192.168.0.6 at port 7584
-sending register message ha
-received welcome
-recvfrom John a

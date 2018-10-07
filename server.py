@@ -39,15 +39,19 @@ def recv_msg(f, conn, addr, name, serverthreads, socketToServers, handler, end, 
                              name, handler, overlay)
                 elif d_t == "sendto":
                     msg = data[(
-                                                len(dest) + len(d_t) + 2):]
-                    if check_if_exists(socket_TCP_r, dest) == "False":
-                        log_output( f, "sendto {} from {} {}".format(dest, name, msg))
-                        log_output(f, "{} not registered with server".format(dest))
-                        log_output(f, "sending message to server overlay {}".format(msg))
-                        t = threading.Thread(target=spwaned_client, args=(
-                            f, msg, serverthreads, socketToServers, dest, name, handler, ip, portno))
-                        t.daemon = True
-                        t.start()
+                        len(dest) + len(d_t) + 2):]
+                    if socket_TCP_r != '':
+                        if check_if_exists(socket_TCP_r, dest) == "False":
+                            log_output(
+                                f, "sendto {} from {} {}".format(dest, name, msg))
+                            log_output(
+                                f, "{} not registered with server".format(dest))
+                            log_output(
+                                f, "sending message to server overlay {}".format(msg))
+                            t = threading.Thread(target=spwaned_client, args=(
+                                f, msg, serverthreads, socketToServers, dest, name, handler, ip, portno))
+                            t.daemon = True
+                            t.start()
                     else:
                         log_output(
                             f, "sendto {} from {} {}".format(dest, name, msg))
@@ -94,7 +98,6 @@ def send_msg(f, msg, serverthreads, socketToServers, dest, name, handler, overla
         log_output(
             f, "{} not registered with server".format(dest))
         if not overlay:
-            print("not overlay send messages")
             log_output(f, "sending message to server overlay {}".format(msg))
             for s_conn in socketToServers:
                 s_conn.sendall("sendto {} from {} {}".format(dest, name, msg))
@@ -134,7 +137,8 @@ def recv_client(f, serversocket_UDP, serverthreads, socketToServers, handler, en
         log_output(
             f, "client connection from host {} port {}".format(addr[0], addr[1]))
         name = conn.recv(1024).decode()
-        socket_TCP_r.sendall('register {}'.format(name))
+        if socket_TCP_r != '':
+            socket_TCP_r.sendall('register {}'.format(name))
         try:
             t = threading.Thread(target=recv_msg, args=(
                 f, conn, addr, name, serverthreads, socketToServers, handler, end, False, socket_TCP_r, ip, portno))
