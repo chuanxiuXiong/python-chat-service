@@ -9,5 +9,3 @@ In the log file, there are a couple places that might cause some confusions:
 2) The rubric specifically asks us to output "received spawn client from registrar" (without the actual name Bob) in Server1.txt and "received client register Bob from server <<IP1> port <hostport>" (with the actual name) in Registrar.txt. This is exactly what I did. If the testing program expects both with the actual name or both without the actual name, please note that this format might not be wrong since this is in the rubric.
 
 To exit server.py/registrar.py, please enter cntr + C. To exit client.py, please type exit. When existing, there might be some customized error messages on the console as some sockets cannot receive data from the other ends. These are well handled by try-catch blocks and please do not deduct points because of these extra output.
-
-I don't think there is any specific console output requirements on this assignment specifically, so please grade mostly based on the log file.
